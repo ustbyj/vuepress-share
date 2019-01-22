@@ -8,9 +8,9 @@ services:
     
   nginx:
     ports:
-      - 80:80
+      - 8080:80
     depends_on:
       - vuepress-share
     environment:
-      - PROXY_PASS=http://vuepress-share:8081
+      - PROXY_PASS=http://vuepress-share:8080
       - PORT=80

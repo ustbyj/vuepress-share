@@ -5,11 +5,10 @@ module.exports = {
         nav: [
             { text: '主页', link: '/' },
             { text: '使用帮助', link: '/help' },
-            { text:  '知识库', link: '/share/'},
+            { text:  '知识库', link: '/python' },
         ],
         sidebar: [
-            '/share/',
-            '/share/one'
-        ]
+            '/python',
+        ],
     }
 }
