@@ -3,14 +3,7 @@ version: '3'
 services:
   vuepress-share:
     image: vuepress_image
+    ports:
+      - 8080:8080
     volumes:
       - ./docs:/app
-    
-  nginx:
-    ports:
-      - 8080:80
-    depends_on:
-      - vuepress-share
-    environment:
-      - PROXY_PASS=http://vuepress-share:8080
-      - PORT=80
