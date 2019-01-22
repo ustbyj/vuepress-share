@@ -1,0 +1,16 @@
+version: '3'
+
+services:
+  vuepress:
+    image: vuepress_image
+    volumes:
+      - ./docs:/app
+    
+  nginx:
+    ports:
+      - 80:80
+    depends_on:
+      - vuepress
+    environment:
+      - PROXY_PASS=http://vuepress:8081
+      - PORT=80
